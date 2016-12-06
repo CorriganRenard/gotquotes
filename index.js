@@ -17,13 +17,13 @@ ready(function() {
     //get quote from GOT Quotes API
     function getQuote() {
         var request = new XMLHttpRequest();
-        request.open("GET", "https://got-quotes.herokuapp.com/quotes", true);
+        request.open("GET", "http://quotes.stormconsultancy.co.uk/random.json", true);
         request.onload = function() {
             if (request.status >= 200 && request.status < 400) {
                 //Success!
                 var quoteBody = JSON.parse(request.responseText);
                 currentQuote = quoteBody.quote;
-                currentAuthor = quoteBody.character;
+                currentAuthor = quoteBody.author;
                 quote.textContent = currentQuote;
                 author.textContent = currentAuthor;
             } else {
