@@ -14,7 +14,7 @@ ready(function() {
 
     getQuote();
 
-    //get quote from GOT Quotes API
+    //get quote from programming Quotes API
     function getQuote() {
         var request = new XMLHttpRequest();
         request.open("GET", "http://quotes.stormconsultancy.co.uk/random.json", true);
